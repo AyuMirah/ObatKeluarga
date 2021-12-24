@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".tambah_member">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="36dp"
+            android:background="#226655"
+            android:gravity="center"
+            android:text="Data Diri Pasien"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/nama"
+            android:layout_width="300dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/edit_text"
+            android:hint="Nama"
+            android:inputType="textCapSentences"
+            android:paddingStart="25dp"
+            android:textColorHint="#707070"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <EditText
+            android:id="@+id/keluhan"
+            android:layout_width="300dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_text"
+            android:ems="10"
+            android:hint="Keluhan Pasien"
+            android:inputType="textCapSentences"
+            android:paddingStart="25dp"
+            android:textColorHint="#707070"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nama" />
+
+        <RadioGroup
+            android:id="@+id/gender"
+            android:layout_width="250dp"
+            android:layout_height="39dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.347"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+
+            <RadioButton
+                android:id="@+id/pria"
+                android:layout_width="100dp"
+                android:layout_height="37dp"
+                android:checked="false"
+                android:onClick="rbclick"
+                android:text="Laki-Laki" />
+
+            <RadioButton
+                android:id="@+id/wanita"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:checked="false"
+                android:onClick="rbclick"
+                android:text="Perempuan" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Gender :"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.163"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/keluhan" />
+
+        <CheckBox
+            android:id="@+id/resepobat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resep Obat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.156"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textpenanganan" />
+
+        <CheckBox
+            android:id="@+id/rawatinap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rawat Inap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textpenanganan" />
+
+        <CheckBox
+            android:id="@+id/rawatjalan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rawat Jalan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.847"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textpenanganan" />
+
+        <TextView
+            android:id="@+id/textpenanganan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Metode Penanganan: "
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.222"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Umur Pasien"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.161"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resepobat" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="251dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="16dp"
+            android:max="110"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.537"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <TextView
+            android:id="@+id/umur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+        <Button
+            android:id="@+id/daftar"
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tombol_hijau"
+            android:text="Daftar"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/umur" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
